@@ -4,6 +4,7 @@
 
 **Study notes · September 28, 2026**
 Source: `September 28, 2026.docx`
+Illustrations: supplied `Microsoft_Intune_Blueprint.pptx`.
 
 These notes retain the terminology and examples used in the conversation. Repetition and conversational filler have been removed. Some speech-to-text wording is unclear; uncertain details are identified rather than filled in. Product capabilities discussed here reflect the conversation, not independently verified product documentation.
 
@@ -65,6 +66,10 @@ The employee uses the infrastructure to develop the business, generate revenue, 
 ---
 
 ## 2. On-prem infrastructure versus cloud-based infrastructure
+
+![On-premises infrastructure and cloud / Intune: building from scratch versus ready to move in.](assets/intune/on-premises-vs-cloud.png)
+
+*The 6–12 month timeline illustrates the home-building analogy. Intune manages endpoints; it does not replace every data-center workload, and licensing, connectivity, and device costs still apply.*
 
 **Cloud-based** was introduced as having no dependency on the company's own **on-prem infrastructure** for the service being discussed.
 
@@ -242,6 +247,10 @@ The discussion distinguishes patching to fix vulnerabilities from a feature upgr
 
 ## 8. Autopilot
 
+![Windows Autopilot journey compared with preparing and shipping a device through the corporate office.](assets/intune/windows-autopilot.png)
+
+*The Intune admin prepares the required configuration before the employee connects and signs in.*
+
 **Autopilot** was introduced as an important topic for an **Intune admin**.
 
 ### 💡 Example: joining a company during COVID
@@ -293,6 +302,10 @@ The **company self-service portal**, called **Company Portal**, was discussed as
 ---
 
 ## 9. Compliance and configuration policies
+
+![Compliance evaluates the baseline; configuration applies settings to address the gap.](assets/intune/compliance-vs-configuration.png)
+
+*The six-character password is the original conversation example. Enforcement depends on the device and applicable policy.*
 
 The key terminology is **baseline**, **compliant**, **non-compliant**, **compliance policy**, and **configuration profile**.
 
