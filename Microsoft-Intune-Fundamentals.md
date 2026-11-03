@@ -22,7 +22,7 @@
 
 ![Four pillars of Microsoft Intune: asset management, deployments, governance, and analytics and control.](assets/intune/four-pillars-of-intune.png)
 
-*Use these four groups to navigate the detailed topics below.*
+**Use these four groups to navigate the detailed topics below.**
 
 ```mermaid
 flowchart TB
