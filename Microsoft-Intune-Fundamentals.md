@@ -1,10 +1,16 @@
 # ☁️ Microsoft Intune Fundamentals
 
+![Microsoft Intune Blueprint: endpoint management, cloud-powered automation, and security.](assets/intune/microsoft-intune-blueprint.png)
+
+*A visual introduction to the topics covered in these notes.*
+
 > **Manage devices · Protect company data · Improve user experience**
 
 **Study notes · September 28, 2026**
 Source: `September 28, 2026.docx`
-Illustrations: supplied `Microsoft_Intune_Blueprint.pptx`.
+Illustrations: all **15 slides** from the supplied `Microsoft_Intune_Blueprint.pptx`, placed beside their related topics.
+
+The illustrations summarize concepts; the accompanying explanations retain the conversation’s examples and clarify simplified claims.
 
 These notes retain the terminology and examples used in the conversation. Repetition and conversational filler have been removed. Some speech-to-text wording is unclear; uncertain details are identified rather than filled in. Product capabilities discussed here reflect the conversation, not independently verified product documentation.
 
@@ -22,6 +28,10 @@ These notes retain the terminology and examples used in the conversation. Repeti
 | [05 · Remote Help](#5-remote-help-quick-assist-attended-and-unattended) | | [13 · Reporting](#13-reporting-and-monitoring) · [14 · RBAC](#14-rbac--role-based-access-control) |
 
 ## 🗺️ Intune at a glance
+
+![Four pillars of Microsoft Intune: asset management, deployments, governance, and analytics and control.](assets/intune/four-pillars-of-intune.png)
+
+*Use these four groups to navigate the detailed topics below.*
 
 ```mermaid
 flowchart TB
@@ -42,6 +52,10 @@ flowchart TB
 ---
 
 ## 1. What is Intune?
+
+![The core mandate of endpoint management: protect the data and enable the user.](assets/intune/endpoint-management-mandate.png)
+
+*Connect this with the stolen-laptop example: protecting company data while enabling employees to work.*
 
 **Intune is a cloud-based solution from Microsoft** used to manage devices, configuration, security, and device security compliance.
 
@@ -97,6 +111,10 @@ The conversation distinguishes **Azure cloud service** from **Entra ID**; Entra 
 ---
 
 ## 3. Asset management — hardware and software inventory
+
+![Hardware inventory for upgrade decisions and software inventory for vulnerability management.](assets/intune/asset-management-vulnerability.png)
+
+*The same inventory examples: identify Windows 10 devices and software version 3.2 that may need upgrading to 5.2.*
 
 An **asset** can be hardware or software.
 
@@ -154,6 +172,10 @@ This was an example scenario about using inventory to make a decision; it is not
 
 ## 4. VPN — Virtual Private Network
 
+![VPN network access compared with Remote Help and Quick Assist for IT support.](assets/intune/vpn-and-remote-help.png)
+
+*VPN connects the employee to the company network; remote assistance helps troubleshoot a device. Attended and unattended support depend on the tool, platform, and configuration.*
+
 **VPN** stands for **Virtual Private Network**.
 
 The conversation describes a VPN as a separate tunnel or bridge between the public network and the private company network, with authentication to allow the user into the company's network.
@@ -197,6 +219,10 @@ The discussion also discussed Intune-managed and co-managed devices, an Intune a
 
 ## 6. Deployments
 
+![Application delivery to all corporate devices, targeted departments, and Company Portal.](assets/intune/application-deployments.png)
+
+*Relate the delivery paths to the postman example: the requester supplies the setup file, target users or devices, and timeline. Company Portal availability depends on assignment and approval.*
+
 **Deployment** was explained through installing applications, updates, feature updates, and assigning policies or settings.
 
 ### 💡 Everyday example: army deployed in Punjab
@@ -232,6 +258,10 @@ The discussion describes obtaining the approved setup file from the requester as
 ---
 
 ## 7. Store application, Windows patching, Office patching, feature update, Auto patch
+
+![Patching and maintenance: quality updates, feature updates, and Autopatch.](assets/intune/patching-maintenance.png)
+
+*Read this alongside the distinction between patches that address vulnerabilities and feature updates that introduce operating-system changes.*
 
 | Term | Explanation and same examples from the conversation |
 | --- | --- |
@@ -369,6 +399,10 @@ The six-character value is the conversation's example, not a password-security r
 
 ## 10. PowerShell script
 
+![PowerShell extends configuration beyond the settings exposed in the management interface.](assets/intune/powershell-extensibility.png)
+
+*The Hanumanji analogy illustrates scripting as a way to carry out additional tasks. What a script can do depends on supported APIs, permissions, and the device.*
+
 **PowerShell** was discussed for requirements where Intune does not provide a built-in option to configure the requested setting.
 
 ### 💡 Analogy: Hanumanji
@@ -380,6 +414,10 @@ PowerShell knowledge was introduced as useful; no script was demonstrated in thi
 ---
 
 ## 11. Co-management
+
+![Co-management as a transition bridge with workloads delegated between SCCM and Intune.](assets/intune/co-management-workloads.png)
+
+*The housewife and maid example explains moving selected workloads. Co-management can also continue as an ongoing management arrangement.*
 
 A **co-managed** machine is managed through both **SCCM** and **Intune**. The discussion explains this in terms of distributing **workloads** between the two management systems.
 
@@ -415,6 +453,10 @@ This describes the migration scenario described in the conversation; it is not a
 ---
 
 ## 12. Endpoint analytics
+
+![Endpoint analytics connects boot delays, application failures, and conflicting policies with recommendations.](assets/intune/endpoint-analytics-experience.png)
+
+*Use Richa and Sarkar’s laptops and the Teams-crashing example to connect device performance with employee experience. The illustration’s monetary figures are illustrative, not a verified calculation from the transcript.*
 
 An **endpoint** is a device such as a **desktop, laptop, or mobile device**.
 
@@ -461,6 +503,10 @@ The aim is to find the issue, fix it, and improve the device's performance and t
 
 ## 13. Reporting and monitoring
 
+![Intune operational cycle: deploy, manage, monitor, and refine.](assets/intune/intune-operational-flywheel.png)
+
+*After deploying Google Chrome, check success and failure reports, investigate problems, and use the findings to improve the next deployment.*
+
 ### 💡 Example: Google Chrome deployment
 
 After deploying **Google Chrome**, check:
@@ -474,6 +520,10 @@ After deploying **Google Chrome**, check:
 ---
 
 ## 14. RBAC — role-based access control
+
+![Role-based access control assigns permissions to administrative responsibilities.](assets/intune/rbac-governance.png)
+
+*Connect this with the HR-folder example and the distinction between Intune admin access and read-only rights. Roles shown in the illustration are conceptual examples.*
 
 **RBAC** means **role-based access control**: assign permissions according to the person's role and work.
 
