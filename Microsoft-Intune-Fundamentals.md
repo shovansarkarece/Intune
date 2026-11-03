@@ -2,10 +2,10 @@
 
 > **Manage devices · Protect company data · Improve user experience**
 
-**Class notes · September 28, 2026**
+**Study notes · September 28, 2026**
 Source: `September 28, 2026.docx`
 
-These notes retain the terminology and examples used in the conversation. Repetition and conversational filler have been removed. Some speech-to-text wording is unclear; uncertain details are identified rather than filled in. Product capabilities discussed here reflect the class conversation, not independently verified product documentation.
+These notes retain the terminology and examples used in the conversation. Repetition and conversational filler have been removed. Some speech-to-text wording is unclear; uncertain details are identified rather than filled in. Product capabilities discussed here reflect the conversation, not independently verified product documentation.
 
 
 ---
@@ -30,10 +30,12 @@ flowchart TB
     I --> C["Compliance and configuration<br/>Evaluate and apply settings"]
     I --> E["Endpoint analytics<br/>Performance and user experience"]
     I --> R["RBAC<br/>Permissions according to role"]
-    classDef main fill:#0969da,color:#fff,stroke:#0550ae
-    classDef topic fill:#ddf4ff,color:#24292f,stroke:#54aeff
-    class I main
-    class A,D,C,E,R topic
+    style I fill:#0969da,color:#fff,stroke:#0550ae
+    style A fill:#ddf4ff,color:#24292f,stroke:#54aeff
+    style D fill:#ddf4ff,color:#24292f,stroke:#54aeff
+    style C fill:#ddf4ff,color:#24292f,stroke:#54aeff
+    style E fill:#ddf4ff,color:#24292f,stroke:#54aeff
+    style R fill:#ddf4ff,color:#24292f,stroke:#54aeff
 ```
 
 ---
@@ -50,7 +52,7 @@ The company wants to:
 - Manage the devices used by employees.
 - Give permission to the user: **“What they can do, how they can do, when they can do?”**
 
-### 💡 Class example: stolen laptop
+### 💡 Example: stolen laptop
 
 The company is more bothered about the **data inside the laptop** than the laptop's price—even if the laptop costs **2 lakh, 3 lakh, or 4 lakh**.
 
@@ -68,7 +70,7 @@ The employee uses the infrastructure to develop the business, generate revenue, 
 
 **On-prem infrastructure** means the company purchases and maintains its own infrastructure: servers, a place to keep them, people to maintain them, security, backup, electricity, cooling, and high-speed internet.
 
-### 💡 Class example: ready-to-move flat versus building your own home
+### 💡 Example: ready-to-move flat versus building your own home
 
 | Example from the conversation | IT terminology | Main point |
 | --- | --- | --- |
@@ -101,7 +103,7 @@ An **asset** can be hardware or software.
 
 ### Hardware inventory
 
-The class discussed collecting information such as:
+The discussion discussed collecting information such as:
 
 - Laptop configuration, including **16 GB RAM**.
 - Company and model.
@@ -114,13 +116,13 @@ Software inventory tells you what software is installed on the device, similar t
 
 The company can identify software that is not approved and take action to uninstall it. **WhatsApp** was used as an example of software a particular company might not approve; this depends on the organization's rules.
 
-### 💡 Class example: vulnerability and outdated software
+### 💡 Example: vulnerability and outdated software
 
 The machine has software version **3.2**, while the vendor's latest version is **5.2**. The old version may have a **loophole**, described in the conversation as a **vulnerability**. A hacker or cyber attacker may use that loophole to access the device.
 
 The discussion connects **vulnerability management** with updating software regularly and installing Windows patches. A user may delay restarting because they are busy, but the update is important to fix vulnerabilities.
 
-### 💡 Class example: 1,000 devices and Windows 10
+### 💡 Example: 1,000 devices and Windows 10
 
 In an environment with **1,000 devices**, inventory shows **70 devices still running Windows 10**.
 
@@ -141,7 +143,7 @@ flowchart LR
 3. If compatible, upgrade to Windows 11.
 4. If not compatible, replace it with a new Windows 11 device.
 
-This was a class scenario about using inventory to make a decision; it is not an operating-system lifecycle reference.
+This was an example scenario about using inventory to make a decision; it is not an operating-system lifecycle reference.
 
 ---
 
@@ -151,11 +153,21 @@ This was a class scenario about using inventory to make a decision; it is not an
 
 The conversation describes a VPN as a separate tunnel or bridge between the public network and the private company network, with authentication to allow the user into the company's network.
 
-### 💡 Class example: connecting from home to the company
+### 💡 Example: connecting from home to the company
 
 You cannot run a physical wire from your home to an office many kilometres away. VPN software creates a **virtual connection** to the company's **on-premises network**.
 
 Examples used: **Cisco AnyConnect** and **GlobalProtect**.
+
+```mermaid
+flowchart LR
+    A["Employee at home<br/>Laptop with VPN software"] --> B["Authentication"]
+    B --> C["VPN<br/>Virtual Private Network tunnel"]
+    C --> D["Company's on-premises network"]
+    style A fill:#ddf4ff,stroke:#54aeff,color:#24292f
+    style C fill:#eaeef2,stroke:#57606a,color:#24292f
+    style D fill:#dafbe1,stroke:#2da44e,color:#24292f
+```
 
 ---
 
@@ -163,7 +175,7 @@ Examples used: **Cisco AnyConnect** and **GlobalProtect**.
 
 **Remote Help** was introduced as a way to connect remotely to a machine, troubleshoot, and fix an issue.
 
-### 💡 Class example: troubleshooting from India
+### 💡 Example: troubleshooting from India
 
 The person providing support is in **India** and remotely connects to another person's machine to take control and fix the issue.
 
@@ -174,7 +186,7 @@ The person providing support is in **India** and remotely connects to another pe
 | **Attended** | Someone is physically present, attends to the code, and allows access to the device. |
 | **Unattended** | No one is physically present, and the support person can connect through the supported remote-control setup. |
 
-The class also discussed Intune-managed and co-managed devices, an Intune agent, and the **Remote Help application** being installed on the device. The transcript does not clearly establish platform-specific prerequisites or unattended support limits.
+The discussion also discussed Intune-managed and co-managed devices, an Intune agent, and the **Remote Help application** being installed on the device. The transcript does not clearly establish platform-specific prerequisites or unattended support limits.
 
 ---
 
@@ -192,11 +204,11 @@ The phrase **“army deployed in Punjab”** was used to introduce the normal-li
 - Change the machine **sleep time**.
 - Configure a template and **deploy the template** or **assign the template**.
 
-### 💡 Class example: Diwali wallpaper
+### 💡 Example: Diwali wallpaper
 
 The company decides to change the wallpaper for **Diwali**, using a theme such as **“celebrate the Diwali with security.”** The Intune admin deploys the company-approved wallpaper. The company may choose a different theme or compliance policy training message the next month.
 
-### 💡 Class example: Intune admin as a postman
+### 💡 Example: Intune admin as a postman
 
 The Intune admin is **“working as a postman”**: picking up letters and dropping them at the correct destination.
 
@@ -210,7 +222,7 @@ The requester should supply the necessary information:
 
 **Same application example:** Richa requests deployment of **VLC Media Player**. The admin knows how to deploy it but needs the setup file and deployment requirements from the requester.
 
-The class describes obtaining the approved setup file from the requester as the preferred practice, rather than independently choosing a generic download.
+The discussion describes obtaining the approved setup file from the requester as the preferred practice, rather than independently choosing a generic download.
 
 ---
 
@@ -220,11 +232,11 @@ The class describes obtaining the approved setup file from the requester as the 
 | --- | --- |
 | **Store application** | **Microsoft Store** was compared with **Google Play Store** on a mobile. Store applications can be deployed through Intune. |
 | **Windows patching** | Microsoft releases patches on the **second Tuesday** of the month. Configure policy to install patches that protect against vulnerabilities. |
-| **Office patching** | Update applications such as **Word, Excel, and PowerPoint**. The class discussed checking version information in the application's account/settings area. |
-| **Feature update** | The class used **Windows 10 to Windows 11** and **Windows 11 to Windows 12** as upgrade examples. The latter is retained as a classroom example, not a release or support claim. |
+| **Office patching** | Update applications such as **Word, Excel, and PowerPoint**. The discussion discussed checking version information in the application's account/settings area. |
+| **Feature update** | The discussion used **Windows 10 to Windows 11** and **Windows 11 to Windows 12** as upgrade examples. The latter is retained as a conversation example, not a release or support claim. |
 | **Auto patch** | Introduced as automating the update work. The same everyday example was a **mixer**: press a button and the chutney is ready. |
 
-The class distinguishes patching to fix vulnerabilities from a feature upgrade. Detailed configuration was left for later sessions.
+The discussion distinguishes patching to fix vulnerabilities from a feature upgrade. Detailed configuration was left for later sessions.
 
 ---
 
@@ -232,7 +244,7 @@ The class distinguishes patching to fix vulnerabilities from a feature upgrade. 
 
 **Autopilot** was introduced as an important topic for an **Intune admin**.
 
-### 💡 Class example: joining a company during COVID
+### 💡 Example: joining a company during COVID
 
 During **COVID**, movement restrictions prevent a new employee from going to the office to collect a laptop prepared by the IT department.
 
@@ -249,7 +261,7 @@ flowchart TD
     style F fill:#dafbe1,stroke:#2da44e,color:#24292f
 ```
 
-With the Autopilot scenario described in class:
+With the Autopilot scenario described in the conversation:
 
 1. A vendor such as **Dell, HP, or Lenovo** delivers the laptop directly to the employee's home.
 2. The employee turns on the laptop and connects it to the internet.
@@ -259,9 +271,9 @@ With the Autopilot scenario described in class:
 
 The **Intune admin** configures the Autopilot settings in the backend. The device can receive the company's approved configuration wherever the employee is located.
 
-### 💡 Class analogy: airplane autopilot
+### 💡 Analogy: airplane autopilot
 
-The class compares this with an airplane continuing to fly in **autopilot mode**, using the example of the pilot going to the washroom. The point of the analogy is automatic operation after the required setup.
+The discussion compares this with an airplane continuing to fly in **autopilot mode**, using the example of the pilot going to the washroom. The point of the analogy is automatic operation after the required setup.
 
 ### Global policy, local policy, and department-specific applications
 
@@ -301,8 +313,8 @@ The company sets a baseline:
 
 - Employees meeting the baseline are **compliant**.
 - Employees not meeting the baseline are **non-compliant**.
-- The class describes **40 compliant** and **60 non-compliant** employees out of 100.
-- Actions such as a salary or allowance deduction were used to illustrate taking action after identifying the gap. This is the class analogy for configuration.
+- The discussion describes **40 compliant** and **60 non-compliant** employees out of 100.
+- Actions such as a salary or allowance deduction were used to illustrate taking action after identifying the gap. This is the discussion analogy for configuration.
 
 ### 💻 Technical example: minimum operating system Windows 11
 
@@ -324,11 +336,11 @@ The company wants to know which machines do not meet a **minimum login password 
 3. The non-compliant examples have passwords of **five, four, three, or two characters**.
 4. The compliance policy identifies the result; in this example, it does not change those passwords.
 5. Use a **configuration profile** to enforce **minimum password length should be 6**.
-6. The class describes the user changing/resetting the password and having to meet that minimum.
+6. The discussion describes the user changing/resetting the password and having to meet that minimum.
 
 ```mermaid
 flowchart TD
-    A["Class baseline<br/>Minimum password length: 6"] --> B["Compliance policy<br/>Evaluate 100 devices"]
+    A["Example baseline<br/>Minimum password length: 6"] --> B["Compliance policy<br/>Evaluate 100 devices"]
     B --> C["40 compliant"]
     B --> D["60 non-compliant<br/>Examples: 5, 4, 3, or 2 characters"]
     D --> E["Configuration profile<br/>Enforce minimum password length: 6"]
@@ -346,7 +358,7 @@ The six-character value is the conversation's example, not a password-security r
 
 **PowerShell** was discussed for requirements where Intune does not provide a built-in option to configure the requested setting.
 
-### 💡 Class analogy: Hanumanji
+### 💡 Analogy: Hanumanji
 
 The instructor compared PowerShell in Intune to **Hanumanji**, referring to Hanumanji doing Ram's work. The teaching point was that scripting can help accomplish additional tasks when a direct Intune option is unavailable.
 
@@ -356,11 +368,11 @@ PowerShell knowledge was introduced as useful; no script was demonstrated in thi
 
 ## 11. Co-management
 
-A **co-managed** machine is managed through both **SCCM** and **Intune**. The class explains this in terms of distributing **workloads** between the two management systems.
+A **co-managed** machine is managed through both **SCCM** and **Intune**. The discussion explains this in terms of distributing **workloads** between the two management systems.
 
 Workload examples discussed include patching, applications, device policies, and **Windows Update for Business**.
 
-### 💡 Class example: housewife, maid, and seven workloads
+### 💡 Example: housewife, maid, and seven workloads
 
 The instructor compares **SCCM** to a **housewife** doing multiple jobs: **cleaning, dusting, cooking, clothing**, and other work—described as **seven workloads**.
 
@@ -381,11 +393,11 @@ flowchart LR
 
 The point is moving responsibility for selected workloads while both systems participate in managing the device.
 
-### 💡 Class example: bridge and transitioning phase
+### 💡 Example: bridge and transitioning phase
 
-The class describes co-management as a **bridge** and a **transitioning phase** from SCCM to Intune: move work gradually, reduce on-prem infrastructure, and save infrastructure cost.
+The discussion describes co-management as a **bridge** and a **transitioning phase** from SCCM to Intune: move work gradually, reduce on-prem infrastructure, and save infrastructure cost.
 
-This describes the migration scenario taught in class; it is not a requirement that every co-management deployment be temporary. The word **hybrid** was also used in conversation, without a detailed distinction between identity join state and co-management.
+This describes the migration scenario described in the conversation; it is not a requirement that every co-management deployment be temporary. The word **hybrid** was also used in conversation, without a detailed distinction between identity join state and co-management.
 
 ---
 
@@ -395,23 +407,23 @@ An **endpoint** is a device such as a **desktop, laptop, or mobile device**.
 
 **Endpoint analytics** was introduced as reports and recommendations used to understand device performance and improve **user experience**.
 
-### 💡 Class example: Richa and Sarkar's laptops
+### 💡 Example: Richa and Sarkar's laptops
 
 **Richa and Sarkar** join the same company, on the same day, in the same department, and receive the same laptop model.
 
-After some time, their laptops take different amounts of time to reach the desktop screen. The class mentions **five minutes**, then discusses a **three-minute** and a **ten-minute** difference; the transcript does not consistently preserve the exact comparison.
+After some time, their laptops take different amounts of time to reach the desktop screen. The discussion mentions **five minutes**, then discusses a **three-minute** and a **ten-minute** difference; the transcript does not consistently preserve the exact comparison.
 
 The main question is: why do similar devices give different performance? Use analysis to find the cause and fix the issue.
 
-### 💡 Class example: Teams crashing
+### 💡 Example: Teams crashing
 
 An application such as **Teams** crashes after opening. This gives the employee a poor **user experience**.
 
 The discussion refers to **XMO — Experience Management Department**, focused on improving user experience.
 
-### 💡 Class example: lost time across a large company
+### 💡 Example: lost time across a large company
 
-The class asks you to multiply a few minutes of delay across **1 lakh employees** and repeated working days to understand the monetary impact. The transcript's numerical calculation is unclear, so no total is inferred here.
+The discussion asks you to multiply a few minutes of delay across **1 lakh employees** and repeated working days to understand the monetary impact. The transcript's numerical calculation is unclear, so no total is inferred here.
 
 Areas discussed for investigation and recommendations:
 
@@ -436,7 +448,7 @@ The aim is to find the issue, fix it, and improve the device's performance and t
 
 ## 13. Reporting and monitoring
 
-### 💡 Class example: Google Chrome deployment
+### 💡 Example: Google Chrome deployment
 
 After deploying **Google Chrome**, check:
 
@@ -444,7 +456,7 @@ After deploying **Google Chrome**, check:
 - On how many machines was it successful?
 - On how many machines did it fail?
 
-**Reporting** shows the outcome. **Monitoring** follows deployment status and ongoing health. The class also mentions monitoring Intune licensing, health, and changes.
+**Reporting** shows the outcome. **Monitoring** follows deployment status and ongoing health. The discussion also mentions monitoring Intune licensing, health, and changes.
 
 ---
 
@@ -452,18 +464,18 @@ After deploying **Google Chrome**, check:
 
 **RBAC** means **role-based access control**: assign permissions according to the person's role and work.
 
-### 💡 Class example: HR folder and marketing employee
+### 💡 Example: HR folder and marketing employee
 
 An **HR folder** should not automatically be accessible to someone from **marketing**. Access depends on the permissions granted for that role.
 
-### 💡 Class example: Intune admin and read-only rights
+### 💡 Example: Intune admin and read-only rights
 
 - An **Intune admin** may need rights to read, write, create policies, modify policies, or delete policies.
 - Another employee may need **read-only rights**.
 - Teams may specialize in **Intune, Entra, OneDrive, SharePoint, Defender, or Mac**.
 - The conversation uses an **Intune expert** and an **Entra expert** to explain why access should match the area of responsibility.
 
-The class closes by emphasizing basic knowledge across technologies and expertise in the area being managed in production.
+The discussion closes by emphasizing basic knowledge across technologies and expertise in the area being managed in production.
 
 ---
 
