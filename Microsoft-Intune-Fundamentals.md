@@ -18,6 +18,8 @@
 | [04 · VPN](#4-vpn--virtual-private-network) | | [12 · Endpoint analytics](#12-endpoint-analytics) |
 | [05 · Remote Help](#5-remote-help-quick-assist-attended-and-unattended) | | [13 · Reporting](#13-reporting-and-monitoring) · [14 · RBAC](#14-rbac--role-based-access-control) |
 
+[Quick revision](#-quick-revision) · [Scenario-based self-check](#-scenario-based-self-check)
+
 ## 🗺️ Intune at a glance
 
 ![Four pillars of Microsoft Intune: asset management, deployments, governance, and analytics and control.](assets/intune/four-pillars-of-intune.png)
@@ -548,3 +550,73 @@ The discussion closes by emphasizing basic knowledge across technologies and exp
 - **Endpoint analytics:** reports and recommendations to improve performance and user experience.
 - **Reporting and monitoring:** check outcomes and ongoing status.
 - **RBAC:** permissions according to role.
+
+
+---
+
+## 🧩 Scenario-based self-check
+
+Use the same approach emphasized in the conversation: ask **“why?”** and **“what?”** before choosing an Intune option. Each question below uses an example already discussed in these notes.
+
+<details>
+<summary><strong>1. A laptop costing 2 lakh, 3 lakh, or 4 lakh is stolen. What is the company most concerned about?</strong></summary>
+
+The **data inside the laptop**: project bid information, client details, mobile numbers, and designations. Losing that data can affect business deals, revenue, and the company's name. Protecting the device supports the larger goal of protecting company data.
+
+</details>
+
+<details>
+<summary><strong>2. Out of 1,000 devices, 70 still run Windows 10. What information helps you decide the next action?</strong></summary>
+
+Use **hardware inventory** to identify those 70 machines and evaluate Windows 11 compatibility. Upgrade compatible machines; replace machines that cannot meet the requirement. This is the original inventory scenario, not an operating-system lifecycle reference.
+
+</details>
+
+<details>
+<summary><strong>3. Richa asks you to deploy VLC Media Player. What do you need before deployment?</strong></summary>
+
+Obtain the approved **setup file**, configuration information, target users or devices, location where relevant, and timeline. Confirm whether the request is immediate or **phase-wise**. The **postman** analogy explains the responsibility: deliver the requested application to the correct destination using the appropriate deployment feature.
+
+</details>
+
+<details>
+<summary><strong>4. A new employee cannot visit the office during COVID. Which scenario explains device preparation at home?</strong></summary>
+
+**Autopilot**: the vendor delivers the laptop, the employee connects it to the internet and signs in with the company's username and password, and the device receives the configured software, policies, and settings. The Intune admin prepares the required backend configuration.
+
+</details>
+
+<details>
+<summary><strong>5. A six-character password baseline gives 40 compliant and 60 non-compliant devices. Which policy identifies the gap, and which applies the setting?</strong></summary>
+
+The **compliance policy** evaluates the baseline and reports **compliant or non-compliant**. The **configuration profile** applies the minimum password-length setting—**“fixing the gap.”** The six-character value belongs to the original example; it is not a security recommendation, and enforcement depends on the device and policy.
+
+</details>
+
+<details>
+<summary><strong>6. In the housewife and maid example, what does transferring the cleaning work represent?</strong></summary>
+
+Moving a **workload** from **SCCM** to **Intune** while both participate in managing the same device. This explains **co-management**. The bridge analogy describes a gradual migration scenario; it does not require every co-management arrangement to be temporary.
+
+</details>
+
+<details>
+<summary><strong>7. Richa and Sarkar received the same laptop model, but performance differs. Where do you begin?</strong></summary>
+
+Use **Endpoint analytics** reports and recommendations to investigate boot time, application failures, conflicting policies, and device performance. The **Teams crashing** example also belongs here: the aim is to find the issue and improve **user experience**.
+
+</details>
+
+<details>
+<summary><strong>8. Google Chrome was deployed. What should you check next?</strong></summary>
+
+Use **reporting and monitoring** to check how many machines received the deployment, how many succeeded, and how many failed. Investigate failures rather than treating deployment alone as proof of success.
+
+</details>
+
+<details>
+<summary><strong>9. Does a marketing employee automatically need access to the HR folder?</strong></summary>
+
+No. Use **RBAC — role-based access control** to give permissions according to responsibility. The same principle explains why one person may need Intune admin permissions while another needs **read-only rights**.
+
+</details>
