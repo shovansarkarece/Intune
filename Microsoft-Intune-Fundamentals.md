@@ -6,15 +6,6 @@
 
 > **Manage devices · Protect company data · Improve user experience**
 
-**Study notes · September 28, 2026**
-Source: `September 28, 2026.docx`
-Illustrations: all **15 slides** from the supplied `Microsoft_Intune_Blueprint.pptx`, placed beside their related topics.
-
-The illustrations summarize concepts; the accompanying explanations retain the conversation’s examples and clarify simplified claims.
-
-These notes retain the terminology and examples used in the conversation. Repetition and conversational filler have been removed. Some speech-to-text wording is unclear; uncertain details are identified rather than filled in. Product capabilities discussed here reflect the conversation, not independently verified product documentation.
-
-
 ---
 
 ## 🧭 Explore the notes
