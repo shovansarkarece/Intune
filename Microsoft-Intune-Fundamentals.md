@@ -1,4 +1,4 @@
-# ☁️ Microsoft Intune
+# ☁️ Microsoft Intune Fundamentals
 
 > **Manage devices · Protect company data · Improve user experience**
 
